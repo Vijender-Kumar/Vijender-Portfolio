@@ -48,6 +48,7 @@
     "lucide-react": "^0.454.0",
     "next": "15.2.4",
     "next-themes": "latest",
+    "nodemailer": "^8.0.4",
     "react": "^19",
     "react-dom": "^19",
     "react-hook-form": "^7.54.1",
@@ -60,6 +61,7 @@
   },
   "devDependencies": {
     "@types/node": "^22",
+    "@types/nodemailer": "^7.0.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8",

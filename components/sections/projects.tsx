@@ -1,68 +1,115 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useEffect, useRef, useState } from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "Workflow Model",
+    title: "TMTC Travel Itinerary",
     description:
-      "Developed a UI for workflow creation, user sign-up, sign-in, and management with dropdowns and conditions. Visualized JSON data and implemented a dynamic workflow tree with color-coded nodes based on data accuracy.",
-    image: "./workflowModel.png?height=300&width=600",
-    technologies: ["SQL", "Spring Boot", "Java", "React.js", "CSS"],
-    github: "https://github.com/meghna-kaushik/Workflow-systems",
-    period: "July 2024 - August 2024",
+      "TMTC Travel Itinerary is a RESTful backend service built with Node.js, Express, and MongoDB that enables users to create, manage, and share travel itineraries. It provides APIs for handling trip details, destinations, schedules, and user-specific plans, with Docker support for easy deployment and scalability.",
+    image: "./tmtc-travel-itinerary.png?height=300&width=600",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "RESTful APIs",
+      "Docker",
+      "JWT Authentication",
+    ],
+    github: "https://github.com/Vijender-Kumar/tmtc-travel-itinerary",
+    period: "November 2025 - January 2026",
   },
   {
-    title: "Chat Application",
+    title: "Travex AI Java",
     description:
-      "Developed a mobile app facilitating user registration, sign-in, and participation in real-time chat functionalities. This application ensures secure storage of data and messages featuring timestamps to signify their sending times.",
-    image: "./chatApplication.jpeg?height=300&width=600",
-    technologies: ["Dart", "Flutter", "Firebase Authentication", "Firebase Firestore"],
-    github: "https://github.com/meghna-kaushik/chat_application",
-    period: "Jan 2023 - Feb 2023",
+      "Travex AI is a Java-based application that leverages AI capabilities to process and generate intelligent outputs from travel-related data or documents. It integrates tools like MongoDB for data storage and Aspose Java API for document handling, enabling features such as automated document parsing, data extraction, and smart content generation. The project demonstrates how AI can be used to streamline travel workflows and enhance data-driven decision-making in backend systems.",
+    image: "./travex-ai-java.png?height=250&width=500",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "MongoDB",
+      "REST APIs",
+      "Aspose Java API",
+    ],
+    github: "https://github.com/Vijender-Kumar/Travex-ai-java",
+    period: "Jun 2025 - August 2025",
   },
   {
-    title: "Face Recognition",
+    title: "Travex AI",
     description:
-      "Developed a robust attendance tracking system that accurately detects and identifies individuals from video feeds.",
-    image: "./FaceRecognization.jpeg?height=300&width=600",
-    technologies: ["Python", "OpenCV"],
-    github: "https://github.com/meghna-kaushik/Microsoft_face_reco_project",
-    period: "May 2022 - June 2022",
+      "Travex AI is a backend-focused application that utilizes AI-driven logic to process and analyze travel-related data. It integrates MongoDB for efficient data storage and supports document processing capabilities, enabling automated extraction, transformation, and intelligent handling of travel information to streamline itinerary and travel data workflows.",
+    image: "./travex-ai-midjourney.png?height=300&width=600",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "RESTful APIs",
+      "AI Integration",
+      "MidJourney AI",
+    ],
+    github: "https://github.com/Vijender-Kumar/Travex-ai",
+    period: "Jun 2025 - August 2025",
   },
-]
+  {
+    title: "Login Registration Java",
+    description:
+      "Login & Registration System is a Java-based backend application that provides secure user authentication and authorization features. It supports user registration, login, and basic validation workflows, demonstrating core concepts like REST APIs, data persistence, and structured user management for scalable applications with proper Exception Handling.",
+    image: "./login-registration-java.png?height=300&width=600",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "RESTful APIs",
+      "Hibernate / JPA",
+      "MySQL",
+      "JWT Authentication",
+      "Exception Handling",
+      "Validation",
+    ],
+    github: "https://github.com/Vijender-Kumar/LoginRegistrationJava",
+    period: "November 2024 - December 2024",
+  },
+];
 
 export default function Projects() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.unobserve(entry.target)
+          setIsVisible(true);
+          observer.unobserve(entry.target);
         }
       },
       { threshold: 0.1 },
-    )
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
     return () => {
       if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+        observer.unobserve(sectionRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <section id="projects" ref={sectionRef} className="py-20 bg-muted/30">
@@ -73,7 +120,9 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="section-title">Projects</h2>
-          <p className="section-subtitle">A showcase of my technical skills and creative problem-solving</p>
+          <p className="section-subtitle">
+            A showcase of my technical skills and creative problem-solving
+          </p>
         </motion.div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +147,9 @@ export default function Projects() {
                     <CardTitle>{project.title}</CardTitle>
                     <Badge variant="outline">{project.period}</Badge>
                   </div>
-                  <CardDescription className="line-clamp-2">{project.description}</CardDescription>
+                  <CardDescription className="line-clamp-2">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <div className="flex flex-wrap gap-2">
@@ -111,8 +162,17 @@ export default function Projects() {
                 </CardContent>
                 <CardFooter className="border-t pt-4">
                   <div className="flex justify-between w-full">
-                    <Button variant="outline" size="sm" className="gap-1" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-1"
+                      asChild
+                    >
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github size={16} />
                         Code
                       </a>
@@ -131,5 +191,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
