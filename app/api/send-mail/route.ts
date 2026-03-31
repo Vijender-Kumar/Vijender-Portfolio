@@ -47,7 +47,10 @@ ${message}
     return NextResponse.json({ success: true });
   } catch (err) {
     return NextResponse.json(
-      { error: "Failed to send email" },
+      {
+        error:
+          "Failed to send message. Please contact support at +918700228181.",
+      },
       { status: 500 },
     );
   }
