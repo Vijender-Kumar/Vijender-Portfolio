@@ -162,11 +162,22 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name">Name</label>
-                      <Input id="name" name="username" required />
+                      <Input
+                        id="name"
+                        name="username"
+                        placeholder="Enter your name"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email">Email</label>
-                      <Input id="email" name="email" type="email" required />
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email id"
+                        required
+                      />
                     </div>
                   </div>
 
@@ -183,12 +194,23 @@ export default function Contact() {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="subject">Subject</label>
-                    <Input id="subject" name="subject" required />
+                    <Input
+                      id="subject"
+                      name="subject"
+                      placeholder="Enter subject"
+                      required
+                    />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="message">Message</label>
-                    <Textarea id="message" name="message" rows={5} required />
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Enter message(minimum 5 words)"
+                      rows={5}
+                      required
+                    />
                   </div>
 
                   <Button
