@@ -46,6 +46,8 @@ export default function Contact() {
     const form = e.target as HTMLFormElement;
 
     const formData = {
+      name: (form.username as HTMLInputElement).value,
+      mobile: (form.mobile as HTMLInputElement).value,
       email: (form.email as HTMLInputElement).value,
       subject: (form.subject as HTMLInputElement).value,
       message: (form.message as HTMLTextAreaElement).value,
@@ -160,7 +162,7 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name">Name</label>
-                      <Input id="name" name="name" required />
+                      <Input id="name" name="username" required />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email">Email</label>
@@ -168,6 +170,17 @@ export default function Contact() {
                     </div>
                   </div>
 
+                  <div className="space-y-2">
+                    <label htmlFor="mobile">Mobile Number</label>
+                    <Input
+                      id="mobile"
+                      name="mobile"
+                      type="tel"
+                      required
+                      pattern="[0-9]{10}"
+                      placeholder="Enter 10-digit mobile number"
+                    />
+                  </div>
                   <div className="space-y-2">
                     <label htmlFor="subject">Subject</label>
                     <Input id="subject" name="subject" required />

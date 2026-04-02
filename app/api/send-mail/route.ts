@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, subject, message, mobile } = await req.json();
 
     if (!subject || !message) {
       return NextResponse.json(
@@ -34,13 +34,13 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
       to: process.env.SMTP_USER,
-      cc: email,
+      // bcc: process.env.SMTP_USER,
       subject,
       text: `
 Name: ${name}
 Email: ${email}
-Message:
-${message}
+Message: ${message}
+Mobile Number: ${mobile}
       `,
     });
 
