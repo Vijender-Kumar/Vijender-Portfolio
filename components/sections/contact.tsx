@@ -214,18 +214,21 @@ export default function Contact() {
                   </div>
 
                   <Button
-                    type="submit"
+                    type="button"
                     className="w-full"
-                    disabled={isSubmitting}
+                    onClick={() => {
+                      toast({
+                        title: "Contact Info",
+                        description: "Please contact at 8700228181",
+                        className: "bg-blue-600 text-white",
+                        duration: 4000,
+                      });
+                    }}
                   >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <Send className="h-4 w-4" />
-                        Send Message
-                      </span>
-                    )}
+                    <span className="flex items-center gap-2">
+                      <Send className="h-4 w-4" />
+                      Send Message
+                    </span>
                   </Button>
                 </form>
               </CardContent>
