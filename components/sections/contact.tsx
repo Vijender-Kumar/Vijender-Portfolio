@@ -11,6 +11,10 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+// Google Apps Script Web App URL (see README + google-apps-script/Code.gs)
+const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+const WORDS_LIMIT = Number(process.env.NEXT_PUBLIC_WORDS_LIMIT) || 5;
+
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -54,17 +58,32 @@ export default function Contact() {
     };
 
     try {
-      const res = await fetch("/api/send-mail", {
+      if (!GOOGLE_SCRIPT_URL) {
+        throw new Error(
+          "Failed to send message. Please contact support at +918700228181.",
+        );
+      }
+
+      const wordCount = formData.message.trim().split(/\s+/).filter(Boolean)
+        .length;
+
+      if (wordCount < WORDS_LIMIT) {
+        throw new Error(`Message must be at least ${WORDS_LIMIT} words`);
+      }
+
+      // "text/plain" keeps this a simple CORS request (no preflight),
+      // which Google Apps Script web apps require.
+      const res = await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "text/plain;charset=utf-8",
         },
         body: JSON.stringify(formData),
       });
 
       const data = await res.json();
 
-      if (!res.ok) {
+      if (!res.ok || !data?.success) {
         throw new Error(
           data?.error ||
             "Failed to send message. Please contact support at +918700228181.",
@@ -75,7 +94,7 @@ export default function Contact() {
       toast({
         title: "Success",
         description:
-          "Your message has been sent successfully. You will receive a response as soon as possible. For urgent queries, please contact us at +918700228181.",
+          "Your message has been sent successfully. You will be contacted soon.",
         className: "bg-green-600 text-white",
         duration: 4000,
       });
@@ -214,20 +233,13 @@ export default function Contact() {
                   </div>
 
                   <Button
-                    type="button"
+                    type="submit"
                     className="w-full"
-                    onClick={() => {
-                      toast({
-                        title: "Contact Info",
-                        description: "Please contact at 8700228181",
-                        className: "bg-blue-600 text-white",
-                        duration: 4000,
-                      });
-                    }}
+                    disabled={isSubmitting}
                   >
                     <span className="flex items-center gap-2">
                       <Send className="h-4 w-4" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </span>
                   </Button>
                 </form>

@@ -81,7 +81,7 @@ export default function Hero() {
                 asChild
               >
                 <a
-                  href="./VijenderKumarResume2026Latest.pdf"
+                  href="./VijenderKumar_2026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
