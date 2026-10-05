@@ -83,7 +83,7 @@ export default function About() {
                   <p className="text-muted-foreground">
                     Master of Computer Applications (Dual Degree)<br />
                     Gitarattan International Business School, Delhi (affiliated with
-                    Guru Gobind Singh Indraprastha University (GGSIPU))
+                    Guru Gobind Singh Indraprastha University (GGSIPU))<br></br>
                     Aug 2015 - Sep 2020<br />
                     86.9%
                   </p>
