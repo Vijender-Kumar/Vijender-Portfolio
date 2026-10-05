@@ -7,11 +7,12 @@ import { Badge } from "@/components/ui/badge"
 
 const experiences = [
   {
-    title: "Software Development Engineer II",
+    title: "Software Development Engineer III (Promoted from Software Development Engineer II in Jul 2026)",
     company: "Omnifi AI Technology Private Limited",
     location: "Gurugram, IN",
     period: "Aug 2023 - Present",
     description: [
+      "Integrated ICICI Bank Composite Payment and Status Check APIs using Java and Spring Boot, implementing bank-specified RSA/ECB/PKCS1 and AES/CBC/PKCS5 encryption/decryption, encrypted request/response handling, Base64 encoding, session-key generation, and IV management.",
       "Led migration from EC2-based cron jobs to AWS ECS Fargate, redesigning to an event-driven, on-demand architecture, reducing infrastructure costs by 35% and improving scalability and fault isolation.",
       "Enhanced co-lending and LOS/LMS systems using Spring Boot & Spring Batch for clients like SaveIn, ShopKirana, Cashfree, Finsall & PayNearby.",
       "Optimized Spring Batch workflows for bulk document processing, achieving a 40% increase in processing speed.",
@@ -24,16 +25,21 @@ const experiences = [
       "Spring Boot",
       "Spring Batch",
       "Microservices",
-      "AWS (EC2, ECS Fargate, Lambda, S3)",
+      "REST APIs",
+      "AWS ECS Fargate",
+      "AWS EC2",
+      "AWS S3",
+      "AWS Lambda",
       "MySQL",
       "MongoDB",
       "PostgreSQL",
-      "REST APIs",
       "Git",
+      "Maven",
+      "Postman"
     ],
   },
   {
-    title: "Software Development Engineer I",
+    title: "Software Development Engineer I (Internal Transfer to Omnifi AI Technology Private Limited in Aug 2023)",
     company: "Arthmatetech Private Limited",
     location: "Gurugram, IN",
     period: "May 2022 - Jul 2023",

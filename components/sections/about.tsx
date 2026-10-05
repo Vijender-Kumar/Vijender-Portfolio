@@ -53,11 +53,16 @@ export default function About() {
         >
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
-            Software Engineer with 5+ years of experience building scalable
-            backend systems using Java, Spring Boot, and Microservices. I
-            specialize in designing cloud-native solutions on AWS, optimizing
-            performance, and developing efficient APIs and batch processing
-            systems.
+            Software Development Engineer III with 6+ years of experience 
+            specializing in Java, Spring Boot, Microservices, and scalable 
+            backend systems. I focus on designing distributed and cloud-native 
+            architectures, developing high-performance APIs, optimizing batch 
+            processing workflows, and building reliable production systems on AWS.
+            <br/>  <br />
+            I have hands-on experience with AWS ECS Fargate, EC2, S3, Lambda, 
+            Spring Batch, MongoDB, MySQL, PostgreSQL, and REST APIs. I have also 
+            worked on financial technology systems including co-lending, 
+            LOS/LMS platforms, payment integrations, and automated processing workflows.
           </p>
         </motion.div>
 
@@ -76,9 +81,11 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Education</h3>
                   <p className="text-muted-foreground">
-                    Master of Computer Applications (Dual Degree), Gitarattan
-                    International Business School, Delhi (affiliated with
-                    GGSIPU), 2015-2020.
+                    Master of Computer Applications (Dual Degree)<br />
+                    Gitarattan International Business School, Delhi (affiliated with
+                    Guru Gobind Singh Indraprastha University (GGSIPU))
+                    Aug 2015 - Sep 2020<br />
+                    86.9%
                   </p>
                 </div>
               </CardContent>
@@ -99,10 +106,11 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Experience</h3>
                   <p className="text-muted-foreground">
-                    SDE-II at Omnifi AI Technology, previously worked at
-                    Arthmate Technology and Tata Consultancy Services, with
-                    experience in building scalable backend systems,
-                    microservices, and AWS-based cloud solutions.
+                    Software Development Engineer III with 6+ years of experience 
+                    specializing in Java, Spring Boot, Microservices, and scalable 
+                    backend systems. I focus on designing distributed and cloud-native 
+                    architectures, developing high-performance APIs, optimizing batch 
+                    processing workflows, and building reliable production systems on AWS.
                   </p>
                 </div>
               </CardContent>
@@ -123,10 +131,9 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Skills</h3>
                   <p className="text-muted-foreground">
-                    Skilled in Java, Spring Boot, and Microservices, with
-                    experience in JavaScript, Node.js, and databases like MySQL,
-                    MongoDB, and PostgreSQL, along with hands-on experience in
-                    AWS services including S3, EC2, ECS Fargate, and Lambda.
+                    Java, JavaScript, Node.js, Spring Boot, Spring Batch,
+                    Microservices, REST APIs, MySQL, MongoDB, PostgreSQL, 
+                    AWS ECS Fargate, EC2, S3, Lambda, Git, Maven, and Postman.
                   </p>
                 </div>
               </CardContent>
@@ -141,15 +148,15 @@ export default function About() {
           className="mt-12 bg-card p-6 rounded-lg shadow-sm"
         >
           <p className="text-lg leading-relaxed">
-            I'm a Software Engineer with 5+ years of experience in Java and
-            Spring Boot, focused on building scalable backend systems and
-            microservices. I have hands-on experience with AWS services like S3,
-            EC2, ECS Fargate, and Lambda for developing cloud-native and
-            event-driven applications.
-            <br /> I specialize in REST API development, Spring Batch for
-            large-scale data processing, and database optimization using MongoDB
-            and MySQL. I also work with tools like Git, Maven, and Postman to
-            build efficient, reliable, and production-ready systems.
+            I'm a Software Development Engineer III with 6+ years of experience 
+            in Java and Spring Boot, focused on building scalable backend systems, 
+            microservices, and distributed architectures. I have hands-on experience 
+            designing cloud-native and event-driven solutions using AWS services 
+            such as ECS Fargate, EC2, S3, and Lambda.
+            <br /><br /> I specialize in REST API development, Spring Batch processing, 
+            database optimization, third-party integrations, and production reliability. 
+            I focus on building efficient, scalable, secure, and maintainable 
+            backend systems.
           </p>
         </motion.div>
       </div>

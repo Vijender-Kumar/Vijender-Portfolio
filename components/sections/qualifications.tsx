@@ -11,6 +11,7 @@ const education = [
     degree: "Master of Computer Applications (Dual Degree)",
     institution: "Guru Gobind Singh Indraprastha University(GGSIPU), Dwarka",
     period: "2015-2020",
+    percentage: "86.9%",
     description: "Completed Master of Computer Applications (Dual Degree).",
   },
 ]
@@ -103,6 +104,7 @@ export default function Qualifications() {
                         <h3 className="text-xl font-semibold">{item.degree}</h3>
                         <p className="text-muted-foreground">{item.institution}</p>
                         <p className="text-sm text-muted-foreground mt-1">{item.period}</p>
+                        <p className="text-sm text-muted-foreground mt-1">{item.percentage}</p>
                         <p className="mt-2">{item.description}</p>
                       </motion.div>
                     ))}

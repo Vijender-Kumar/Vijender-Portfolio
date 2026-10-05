@@ -57,7 +57,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                Software Engineer (SDE-II)
+                Software Development Engineer III (SDE III)
+                <br />Java | Spring Boot | Microservices | AWS
               </p>
             </motion.div>
 
